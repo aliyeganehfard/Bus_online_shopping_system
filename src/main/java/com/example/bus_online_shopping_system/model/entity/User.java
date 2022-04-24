@@ -2,6 +2,7 @@ package com.example.bus_online_shopping_system.model.entity;
 
 import com.example.bus_online_shopping_system.model.entity.base.BaseEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,9 +18,10 @@ import java.util.Objects;
 @ToString
 @SuperBuilder(toBuilder = true)
 @Entity
+@Table(name = "Accounts")
 public class User extends BaseEntity<Integer> {
-        private String username;
-        private String password;
+    private String username;
+    private String password;
 
     @Override
     public boolean equals(Object o) {
@@ -34,3 +36,5 @@ public class User extends BaseEntity<Integer> {
         return getClass().hashCode();
     }
 }
+
+
