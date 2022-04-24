@@ -2,10 +2,7 @@ package com.example.bus_online_shopping_system.model.entity;
 
 import com.example.bus_online_shopping_system.model.entity.base.BaseEntity;
 import com.example.bus_online_shopping_system.model.util.Gender;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,6 +17,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @ToString
 @SuperBuilder(toBuilder = true)
+@Table(name = "Orders")
 @Entity
 public class Order extends BaseEntity<Integer> {
     private String name;
