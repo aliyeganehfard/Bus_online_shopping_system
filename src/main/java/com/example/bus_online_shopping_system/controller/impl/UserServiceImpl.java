@@ -11,4 +11,8 @@ public class UserServiceImpl extends ServiceImpl<UserRepositoryImpl, User,Intege
         super(new UserRepositoryImpl());
         userRepository = new UserRepositoryImpl();
     }
+
+    public User loginUser(String username , String password){
+        return userRepository.login(User.class,username,password);
+    }
 }
