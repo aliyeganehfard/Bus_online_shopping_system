@@ -22,7 +22,8 @@ class OrderRepositoryImplTest {
         order = Order.builder()
                 .id(null)
                 .name("ali")
-                .gender(Gender.MALE)
+//                .gender(Gender.MALE)
+                .gender(Gender.valueOf("MALE"))
                 .ticket(null)
                 .user(null)
                 .build();
